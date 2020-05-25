@@ -12,6 +12,7 @@ fi
 # alternate: if grep -qs $MOUNTPOINT /proc/mounts; then
 # alternate: use mount command
 if (df | grep -qs $MOUNTPOINT); then
+    # unmount: fusermount -u mountpoint/
     echo "It's mounted."
 else
     echo "It's not mounted. Mounting:"
